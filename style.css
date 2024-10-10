@@ -1,0 +1,233 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: poppins;
+}
+
+p, li {
+  font-size: small;
+  font-weight: 500;
+}
+
+.neo {
+  border: 1px solid black;
+  box-shadow: 0.25rem 0.25rem 0px 0px rgba(0, 0, 0, 1);
+  transition: transform 150ms, box-shadow 150ms;
+}
+.neo-default {
+  border: 1px solid black;
+  box-shadow: 0.25rem 0.25rem 0px 0px rgba(0, 0, 0, 1);
+  transition: transform 150ms, box-shadow 150ms;
+}
+.neo:hover {
+  transform: translate(0.25rem, 0.25rem);
+  box-shadow: 0rem 0rem 0px 0px rgba(0, 0, 0, 1);
+}
+
+.nav {
+  width: 100%;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border-bottom: 2px solid black;
+  top: 0;
+  left: 0; 
+  z-index: 40;
+  background-color: white;
+}
+
+.nav {
+  padding: 14px 120px;
+}
+
+.hero {
+  padding: 0 120px;
+}
+
+.hero a {
+  padding: 0.5rem 0.75rem;
+}
+
+.nav-ul {
+  list-style: none;
+  display: flex;
+  justify-content: end;
+  gap: 24px;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 2px dashed black;
+}
+
+.hero img {
+  height: 40vh;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.decoration {
+  position: absolute;
+  top: 0%;
+  left: 20%;
+  z-index: -10;
+  height: 100vh;
+  border-left: 2px solid black;
+}
+
+.decoration-2 {
+  position: absolute;
+  top: 0%;
+  left: 30%;
+  z-index: -10;
+  height: 100vh;
+  border-left: 2px dashed black;
+}
+
+.image-capt {
+  padding: 10px 20px;
+  background: #fff;
+}
+
+.hero-child {
+  display: flex;
+  gap: 40px;
+  max-width: 60%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-right: 2px solid  black;
+  padding-right: 40px;
+}
+
+.hero-capt {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero-capt p{
+  font-size: medium;
+}
+
+.hero-capt p span {
+  background-color: black;
+  color: white;
+  padding: 0 5px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+.button-col {
+  margin-top: 20px;
+  display: flex;
+}
+
+.history {
+  padding: 40px 120px 0 ;
+  border-bottom: 2px solid black ;
+}
+
+.history-capt {
+  margin-top: 20px;
+  display: grid;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.history-capt .neo-default {
+  padding: 20px;
+  grid-row: span 2 / span 2;
+}
+
+.acchivment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding: 40px 120px;
+}
+.acchivment .ach-ttl {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.ach-cntnt {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.neo-cntnt {
+  padding: 10px 20px;
+}
+
+.ach-card {
+  background: #fff;
+}
+
+hr {
+  border-top: 1px solid black;
+}
+
+.ach-dcr {
+  position: absolute;
+  top: 0%;
+  right: 30%;
+  z-index: -10;
+  height: 100vh;
+  border-left: 2px dashed black;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #000;
+  color :#fff;
+}
+
+.name-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.links-section {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.copyright-section {
+  font-size: 14px;
+}
+
+.copyright-section a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+}
