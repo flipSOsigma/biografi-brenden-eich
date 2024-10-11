@@ -12,22 +12,31 @@
       <h3>Biografi Brendan Eich</h3>
       <p>Pencipta javaScript </p>
     </div>
+    <label for="nav-toggle" class="toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </label>
+    <input type="checkbox" name="" id="nav-toggle">
     <ul class="nav-ul">
-      <li>Biografi</li>
-      <li>Cerita</li>
-      <li>Pencapaian</li>
+      <label for="nav-toggle" class="toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </label>
+      <li><a href="#biografi">Biografi</a></li>
+      <li><a href="#cerita">Cerita</a></li>
+      <li><a href="#pencapaian">Pencapaian</a></li>
     </ul>
   </div>  
-  <div class="hero">
+  <div id="biografi" class="hero">
     <div class="hero-child">
       <div class="image-card neo-default">
         <img src="images/brendan eich.jpg" alt="">
-        <div class="image-capt">
+        <figcaption class="image-capt">
           <h2>Brenden Eich</h2>
           <p>Pencipta Brave Browser dan javaScript</p>
-        </div>
-        <div class="decoration"></div>
-        <div class="decoration-2"></div>
+        </figcaption>
       </div>
       <div class="hero-capt">
         <h1>Biografi Brenden Eich</h1>
@@ -41,12 +50,12 @@
           JavaScript, sebuah bahasa pemrograman penting yang merevolusi pengembangan web.</span>
         </p>
         <div class="button-col">
-          <a href="" class="neo">baca lebih lanjut</a>
+          <a href="#cerita" class="neo">baca lebih lanjut</a>
         </div>
       </div>
     </div>
   </div>
-  <div class="history">
+  <div id="cerita" class="history">
     <div class="history-ttl">
       <h1>Short Story dari Brenden Eich</h1>
       <p>cerita mengenai karir dari seorang brenden eich</p>
@@ -63,7 +72,7 @@
       </p>
     </div>
   </div>
-  <div class="acchivment">
+  <div id="pencapaian" class="acchivment">
     <div class="ach-dcr"></div>
     <div class="ach-ttl">
       <h1>Pencapaian Brenden Eich</h1>
@@ -127,9 +136,11 @@
     </div>
   </div>
   <footer>
-    <div class="copyright-section">
+    <p class="copyright-section">
       Naufal Alif Mahendra - A11.2024.15734 ● &copy; Copyright 2024 <a href="https://github.com/flipSOsigma" target="_blank">flipSOsigma</a>
-    </div>
+    </p>
   </footer>
+  <a href="#top" class="back neo">⬆   
+  </a>
 </body>
 </html>

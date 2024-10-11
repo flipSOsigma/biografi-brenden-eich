@@ -7,8 +7,18 @@
 
 body {
   font-family: poppins;
+  overflow-x: hidden;
 }
-
+p::selection,
+h1::selection,
+h2::selection,
+h3::selection,
+h4::selection,
+h5::selection,
+a::selection {
+  background-color: black;
+  color: white;
+}
 p, li {
   font-size: small;
   font-weight: 500;
@@ -51,6 +61,11 @@ p, li {
   padding: 0 120px;
 }
 
+.button-col {
+  display: flex;
+  justify-content: center;
+}
+
 .hero a {
   padding: 0.5rem 0.75rem;
 }
@@ -65,38 +80,19 @@ p, li {
 .hero {
   height: 100vh;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   overflow: hidden;
   border-bottom: 2px dashed black;
 }
 
 .hero img {
-  height: 40vh;
+  width: 20vw;
 }
 
 .image-card {
   display: flex;
   flex-direction: column;
-  position: relative;
-}
-
-.decoration {
-  position: absolute;
-  top: 0%;
-  left: 20%;
-  z-index: -10;
-  height: 100vh;
-  border-left: 2px solid black;
-}
-
-.decoration-2 {
-  position: absolute;
-  top: 0%;
-  left: 30%;
-  z-index: -10;
-  height: 100vh;
-  border-left: 2px dashed black;
 }
 
 .image-capt {
@@ -106,19 +102,20 @@ p, li {
 
 .hero-child {
   display: flex;
+  flex-direction: column;
+  text-align: center;
   gap: 40px;
   max-width: 60%;
   justify-content: center;
   align-items: center;
   height: 100%;
-  border-right: 2px solid  black;
   padding-right: 40px;
 }
 
 .hero-capt {
   display: flex;
+  gap: 20px;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 .hero-capt p{
@@ -178,6 +175,10 @@ a {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .neo-cntnt {
   padding: 10px 20px;
 }
@@ -222,12 +223,194 @@ footer {
   margin-bottom: 20px;
 }
 
+.toggle {
+  display: none;
+}
+
 .copyright-section {
   font-size: 14px;
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
 }
 
 .copyright-section a {
   text-decoration: none;
   font-weight: 600;
   color: #fff;
+}
+
+.bar {
+  background: #000;
+  padding: 2px;
+  border-radius: 20px;
+}
+
+#nav-toggle {
+  display: none;
+}
+
+.back {
+  position: fixed;
+  background-color: white;
+  z-index: 50;
+  bottom: 40px;
+  right: 40px;
+  width: 20px;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  padding: 20px;
+}
+
+
+@media only screen and (max-width: 1300px) {
+  .ach-cntnt {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  } 
+  .history-capt {
+    margin-top: 20px;
+    display: grid;
+    padding-bottom: 40px;
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .history-capt .neo-default{
+    grid-row: span 1 / 1;
+  }
+  .hero { 
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 0 40px 0;
+  }
+  .hero-child {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    max-width: fit-content;
+    text-align: center;
+    padding: 0;
+    border-right: 0;
+    flex-direction: column;
+  }
+  .button-col {
+    display: flex;
+    justify-content: center;
+  }
+  .hero-capt {
+    padding: 0 20px;
+  }
+  .nav {
+    padding: 14px 20px;
+  }
+  .nav-ul {
+    display: flex;
+    justify-content: start;
+    top: 0;
+    transition: 500ms;
+    padding: 40px;
+    right: -100%;
+    flex-direction: column;
+    background: #fff;
+    border-left: 2px solid black;
+    width: 50vw;
+    height: 100vh;
+    position: fixed;
+  }
+  #nav-toggle:checked ~ .nav-ul {
+    right: 0%;
+  }
+  .acchivment, .history {
+    padding: 40px 40px;
+  }
+  .toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 27px;
+    gap: 3px;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .ach-cntnt {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  } 
+  .history-capt {
+    margin-top: 20px;
+    display: grid;
+    padding-bottom: 40px;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .history-capt .neo-default{
+    grid-row: span 1 / 1;
+  }
+  .hero { 
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 120px 0 40px 0;
+  }
+  .hero-child {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    max-width: fit-content;
+    text-align: center;
+    padding: 0;
+    border-right: 0;
+    flex-direction: column;
+  }
+  .button-col {
+    display: flex;
+    justify-content: center;
+  }
+  .hero-capt {
+    padding: 0 20px;
+  }
+  .nav {
+    padding: 14px 20px;
+  }
+  .nav-ul {
+    display: flex;
+    justify-content: start;
+    top: 0;
+    transition: 500ms;
+    padding: 40px;
+    right: -100%;
+    flex-direction: column;
+    background: #fff;
+    border-left: 2px solid black;
+    width: 50vw;
+    height: 100vh;
+    position: fixed;
+  }
+  #nav-toggle:checked ~ .nav-ul {
+    right: 0%;
+  }
+  .acchivment, .history {
+    padding: 40px 40px;
+  }
+  .toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 27px;
+    gap: 3px;
+    cursor: pointer;
+  }
 }
